@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.E.T. | Spectral Environment Tracker</title>
+    <style>
+        :root {
+            --primary-green: #00ff41; 
+            --dark-bg: #0d0d0d;
+            --panel-bg: #1a1a1a;
+            --text-color: #e0e0e0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--panel-bg);
+            padding: 20px 0;
+            border-bottom: 2px solid var(--primary-green);
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        h1 {
+            margin: 0;
+            color: var(--primary-green);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        nav a {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-green);
+        }
+
+        .hero {
+            text-align: center;
+            padding: 100px 20px;
+            background: radial-gradient(circle at center, #1a2a1a 0%, var(--dark-bg) 100%);
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: transparent;
+            color: var(--primary-green);
+            border: 2px solid var(--primary-green);
+            padding: 10px 30px;
+            font-size: 1.1rem;
+            text-decoration: none;
+            margin-top: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--primary-green);
+            color: var(--dark-bg);
+            box-shadow: 0 0 15px var(--primary-green);
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+
+        .feature-card {
+            background-color: var(--panel-bg);
+            padding: 20px;
+            border: 1px solid #333;
+            border-left: 4px solid var(--primary-green);
+        }
+
+        .contact-section {
+            background-color: var(--panel-bg);
+            text-align: center;
+            padding: 60px 20px;
+            margin-top: 50px;
+            border-top: 1px solid #333;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+            color: #666;
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>S.E.T. Device</h1>
+            <nav style="margin-top: 10px;">
+                <a href="#features">Capabilities</a>
+                <a href="#about">The Project</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Unseen. Unheard. Revealed.</h2>
+        <p>The next generation of paranormal research equipment tailored for precision.</p>
+        <a href="#contact" class="btn">Join the Waitlist</a>
+    </section>
+
+    <div class="container" id="features">
+        <h3 style="color: var(--primary-green); border-bottom: 1px solid #333; padding-bottom: 10px;">Device Capabilities</h3>
+        <div class="features">
+            <div class="feature-card">
+                <h4>Ultrasonic Sensor</h4>
+                <p>Advanced distance measuring technology that detects physical movement and unseen anomalies in total darkness.</p>
+            </div>
+            <div class="feature-card">
+                <h4>8-Hour Battery Life</h4>
+                <p>Equipped with a high-capacity power source designed for long-duration investigations without interruption.</p>
+            </div>
+            <div class="feature-card">
+                <h4>Custom Coded Core</h4>
+                <p>Powered by proprietary firmware designed for rapid data logging and real-time field analysis.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="about">
+        <h3>About the Project</h3>
+        <p>Developed by <strong>Thespectrals</strong>, the S.E.T. (Spectral Environment Tracker) is a custom-engineered solution for serious investigators. Born from a need for reliable data in the field, this device bridges the gap between raw sensors and actionable evidence.</p>
+    </div>
+
+    <div id="contact" class="contact-section">
+        <h3>Join the S.E.T. Waitlist</h3>
+        <p>We are currently in the prototyping phase. Email us to get notified when units are available.</p>
+        <br>
+        <a href="mailto:thespectrals00@gmail.com?subject=Join%20S.E.T.%20Waitlist&body=Hi%20Thespectrals%20Team,%0D%0A%0D%0AI%20would%20like%20to%20be%20added%20to%20the%20waitlist%20for%20the%20S.E.T.%20Device.%0D%0A%0D%0AName:%0D%0ALocation%20(City/State):%0D%0AQuestions%20(Optional):" class="btn">
+            Email to Join Waitlist
+        </a>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Thespectrals. Designed in Huntington, IN.</p>
+    </footer>
+
+</body>
+</html>
