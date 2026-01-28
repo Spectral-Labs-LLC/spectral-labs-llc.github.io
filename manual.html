@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>S.E.T. User Manual | Spectral Labs</title>
+    
+    <meta name="robots" content="noindex"> <link rel="icon" type="image/png" href="favicon.png">
+
+    <style>
+        :root {
+            --primary-green: #00ff41; 
+            --dark-bg: #0d0d0d;
+            --panel-bg: #1a1a1a;
+            --text-color: #e0e0e0;
+            --warning-red: #ff3333;
+        }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            margin: 0; padding: 0;
+            background-color: var(--dark-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+            padding-top: 140px;
+        }
+        
+        /* HEADER */
+        header {
+            background-color: var(--panel-bg);
+            padding: 20px 0;
+            border-bottom: 2px solid var(--primary-green);
+            text-align: center;
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+        }
+        h1 { margin: 0; color: var(--primary-green); text-transform: uppercase; letter-spacing: 2px; }
+        
+        /* NAV */
+        nav { margin-top: 10px; }
+        nav a {
+            color: var(--text-color); text-decoration: none; margin: 0 15px;
+            font-weight: bold; transition: color 0.3s;
+        }
+        nav a:hover { color: var(--primary-green); }
+        
+        /* CONTAINER */
+        .container { max-width: 800px; margin: 0 auto; padding: 40px 20px; }
+        
+        /* MANUAL SECTIONS */
+        .manual-section {
+            background-color: var(--panel-bg);
+            padding: 30px;
+            border: 1px solid #333;
+            margin-bottom: 30px;
+        }
+        h2 { color: var(--primary-green); border-bottom: 1px solid #333; padding-bottom: 10px; }
+        h3 { color: #fff; margin-top: 20px; }
+        
+        .warning-box {
+            border: 1px solid var(--warning-red);
+            background-color: rgba(255, 50, 50, 0.1);
+            padding: 15px;
+            margin-top: 20px;
+            color: #ffcccc;
+            font-size: 0.9rem;
+        }
+
+        .btn {
+            display: inline-block; background-color: transparent;
+            color: var(--primary-green); border: 2px solid var(--primary-green);
+            padding: 10px 30px; font-size: 1.1rem; text-decoration: none;
+            margin-top: 20px; transition: all 0.3s ease; cursor: pointer;
+        }
+        .btn:hover {
+            background-color: var(--primary-green); color: var(--dark-bg);
+        }
+
+        /* FOOTER */
+        footer {
+            text-align: center; padding: 20px; border-top: 1px solid #333;
+            font-size: 0.9rem; color: #666;
+            margin-top: 50px;
+        }
+
+        @media screen and (max-width: 600px) {
+            body { padding-top: 160px; }
+            .container { padding: 20px 10px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container" style="padding: 0;">
+            <h1>Spectral Labs LLC</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="set-device.html">Product Info</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        
+        <div style="text-align: center; margin-bottom: 40px;">
+            <h2 style="border: none;">S.E.T. Device User Manual</h2>
+            <p>Model: S.E.T. v1.0 (Prototype)</p>
+            <a href="#" class="btn">Download PDF Version</a>
+        </div>
+
+        <div class="manual-section">
+            <h2>Quick Start Guide</h2>
+            <ol style="margin-left: 20px;">
+                <li style="margin-bottom: 15px;"><strong>Power On:</strong> Slide the toggle switch on the side of the unit to the "ON" position.</li>
+                <li style="margin-bottom: 15px;"><strong>Calibration:</strong> Place the device on a stable surface facing the area you wish to monitor. Do not move the device for 5 seconds while the sensor calibrates to the environment.</li>
+                <li style="margin-bottom: 15px;"><strong>Active Mode:</strong> Once the OLED display shows "ARMED," the tripwire is active.</li>
+                <li style="margin-bottom: 15px;"><strong>Alert:</strong> If the distance measurement changes drastically, the screen will flash and record the event.</li>
+            </ol>
+        </div>
+
+        <div class="manual-section">
+            <h2>Troubleshooting</h2>
+            <h3>Screen is blank?</h3>
+            <p>Ensure the battery is fully charged via the USB-C port. Check that the power switch is fully engaged.</p>
+            
+            <h3>False Positives?</h3>
+            <p>Ensure there are no moving objects (curtains, pets) directly in front of the ultrasonic sensor. The device works best in still environments.</p>
+        </div>
+
+        <div class="manual-section">
+            <h2 style="color: var(--warning-red); border-color: var(--warning-red);">Safety & Warnings</h2>
+            
+            <div class="warning-box">
+                <strong>BATTERY WARNING:</strong> This device contains a rechargeable Lithium-Ion battery. Do not puncture, crush, or expose to extreme heat or fire. Do not leave charging unattended overnight.
+            </div>
+
+            <div class="warning-box">
+                <strong>LEGAL DISCLAIMER:</strong> The S.E.T. Device is sold as a tool for paranormal research and entertainment purposes only. Spectral Labs LLC makes no claims regarding the existence of paranormal phenomena and is not liable for misuse of this equipment.
+            </div>
+            
+            <p style="font-size: 0.8rem; color: #666; margin-
