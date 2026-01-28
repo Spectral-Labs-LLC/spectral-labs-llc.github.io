@@ -94,6 +94,26 @@
             text-align: center; padding: 20px; border-top: 1px solid #333;
             font-size: 0.9rem; color: #666;
         }
+
+        /* --- MOBILE PHONE OPTIMIZATION --- */
+        /* These rules ONLY apply when the screen is smaller than 600px */
+        @media screen and (max-width: 600px) {
+            .hero h2 { font-size: 1.8rem; }
+            
+            nav a, .dropdown {
+                display: block;
+                margin: 15px 0;
+                border-bottom: 1px solid #333;
+                padding-bottom: 5px;
+            }
+            
+            .dropdown-content {
+                position: relative;
+                width: 100%;
+            }
+            
+            .container { padding: 20px 10px; }
+        }
     </style>
 </head>
 <body>
