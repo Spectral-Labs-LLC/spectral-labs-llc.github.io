@@ -44,44 +44,18 @@
         }
         nav a:hover, .dropdown:hover .dropbtn { color: var(--primary-green); }
 
-        /* The Dropdown Container */
-        .dropdown {
-            display: inline-block;
-            position: relative;
-        }
-
-        /* The Dropdown Content (Hidden by Default) */
+        .dropdown { display: inline-block; position: relative; }
         .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: var(--panel-bg);
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
-            border: 1px solid var(--primary-green);
-            z-index: 1000;
-            left: 0; /* Aligns dropdown to the left of the button */
+            display: none; position: absolute; background-color: var(--panel-bg);
+            min-width: 160px; box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+            border: 1px solid var(--primary-green); z-index: 1000; left: 0;
         }
-
-        /* Links inside the dropdown */
         .dropdown-content a {
-            color: var(--text-color);
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-            margin: 0; /* Reset margin for dropdown items */
+            color: var(--text-color); padding: 12px 16px; text-decoration: none;
+            display: block; text-align: left; margin: 0;
         }
-
-        /* Hover effects inside dropdown */
-        .dropdown-content a:hover {
-            background-color: #333;
-            color: var(--primary-green);
-        }
-
-        /* Show the dropdown menu on hover */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
+        .dropdown-content a:hover { background-color: #333; color: var(--primary-green); }
+        .dropdown:hover .dropdown-content { display: block; }
 
         .hero {
             text-align: center; padding: 100px 20px;
@@ -106,6 +80,26 @@
             text-align: center; padding: 20px; border-top: 1px solid #333;
             font-size: 0.9rem; color: #666;
         }
+
+        /* --- MOBILE PHONE OPTIMIZATION --- */
+        /* These rules ONLY apply when the screen is smaller than 600px */
+        @media screen and (max-width: 600px) {
+            .hero h2 { font-size: 1.8rem; } /* Smaller text */
+            
+            nav a, .dropdown {
+                display: block; /* Stacks links vertically */
+                margin: 15px 0;
+                border-bottom: 1px solid #333; /* Adds lines between links for clarity */
+                padding-bottom: 5px;
+            }
+            
+            .dropdown-content {
+                position: relative; /* Dropdown pushes content down instead of floating over it */
+                width: 100%;
+            }
+            
+            .container { padding: 20px 10px; } /* Less padding on edges */
+        }
     </style>
 </head>
 <body>
@@ -115,11 +109,11 @@
             <h1>Spectral Labs LLC</h1>
             <nav>
                 <a href="index.html">Home</a>
-                
                 <div class="dropdown">
-                    <button class="dropbtn">Products &#9662;</button> <div class="dropdown-content">
+                    <button class="dropbtn">Products &#9662;</button>
+                    <div class="dropdown-content">
                         <a href="set-device.html">S.E.T. Device</a>
-                        </div>
+                    </div>
                 </div>
                 <a href="#about">Mission</a>
             </nav>
