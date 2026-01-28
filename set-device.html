@@ -27,10 +27,57 @@
             position: sticky; top: 0; z-index: 1000;
         }
         h1 { margin: 0; color: var(--primary-green); text-transform: uppercase; letter-spacing: 2px; }
-        nav a {
-            color: var(--text-color); text-decoration: none; margin: 0 15px; font-weight: bold; transition: color 0.3s;
+        
+        /* NAVIGATION & DROPDOWN STYLES */
+        nav { margin-top: 10px; }
+        nav a, .dropbtn {
+            color: var(--text-color);
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s;
+            background: none;
+            border: none;
+            font-family: inherit;
+            font-size: 1rem;
+            cursor: pointer;
         }
-        nav a:hover { color: var(--primary-green); }
+        nav a:hover, .dropdown:hover .dropbtn { color: var(--primary-green); }
+
+        .dropdown {
+            display: inline-block;
+            position: relative;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: var(--panel-bg);
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.5);
+            border: 1px solid var(--primary-green);
+            z-index: 1000;
+            left: 0;
+        }
+
+        .dropdown-content a {
+            color: var(--text-color);
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+            margin: 0;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #333;
+            color: var(--primary-green);
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
         .hero {
             text-align: center; padding: 80px 20px;
             background: radial-gradient(circle at center, #1a2a1a 0%, var(--dark-bg) 100%);
@@ -70,9 +117,16 @@
     <header>
         <div class="container">
             <h1>Spectral Labs LLC</h1>
-            <nav style="margin-top: 10px;">
+            <nav>
                 <a href="index.html">Home</a>
-                <a href="#features">S.E.T. Specs</a>
+                
+                <div class="dropdown">
+                    <button class="dropbtn">Products &#9662;</button>
+                    <div class="dropdown-content">
+                        <a href="set-device.html">S.E.T. Device</a>
+                    </div>
+                </div>
+
                 <a href="#contact">Waitlist</a>
             </nav>
         </div>
