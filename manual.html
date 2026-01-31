@@ -147,7 +147,7 @@
 
                 <h3>2. Startup & Calibration</h3>
                 <div class="warning-box">
-                    <strong>CRITICAL:</strong> The device must be calibrated against a solid, stationary surface (wall, door, etc.) before scanning can begin.
+                    <strong>CRITICAL:</strong> The device must be calibrated against a solid, stationary surface (wall, door, etc.) OR pointed at open space before scanning can begin.
                 </div>
                 <ol>
                     <li><strong>Power On:</strong> Flip the main power switch.</li>
@@ -155,25 +155,22 @@
                 </ol>
                 <p><strong>Status Indicators:</strong> <span class="readout">CALIBRATING...</span> &rarr; <span class="readout">VERIFYING...</span> &rarr; <span class="readout">CONFIRMING...</span></p>
                 
-                <h4>Calibration Errors:</h4>
+                <h4>Calibration Notes:</h4>
                 <ul>
+                    <li><strong>Open Space Mode:</strong> If no wall is detected during startup, the device defaults to a maximum range of <strong>120 Inches</strong>.</li>
                     <li><strong>ERROR: <span class="readout">UNSTABLE AREA / RE-AIM DEVICE</span></strong><br>
                     <em>Cause:</em> The sensor is detecting "jumping" numbers (e.g., the beam is hitting the edge of a chair or railing).<br>
                     <em>Solution:</em> Move the device 1–2 inches left or right to find a solid surface.</li>
-                    
-                    <li><strong>ERROR: <span class="readout">TARGET TOO FAR / MOVE CLOSER</span></strong><br>
-                    <em>Cause:</em> The sensor is pointing at empty space (> 115 inches) or the target is out of range.<br>
-                    <em>Solution:</em> Move closer to a wall or choose a closer backstop.</li>
                 </ul>
 
                 <h3>3. Scanning Operation</h3>
                 <p>Once <span class="readout">RANGE CALIBRATED</span> appears, the device enters Active Scan Mode.</p>
-                <h4>The Scanning Screen:</h4>
+                <h4>The Scanning Screen Layout:</h4>
                 <ul>
-                    <li>Top Left: <span class="readout">SCANNING...</span> (Pulsing indicator).</li>
-                    <li>Center: <span class="readout">BATT: XX%</span> (Current battery level).</li>
-                    <li>Bottom Left: <span class="readout">HITS: XX</span> (Total lifetime anomaly count).</li>
-                    <li>Bottom Right: <span class="readout">LAST: XX</span> (Distance of the last recorded anomaly).</li>
+                    <li>Top Row: <span class="readout">SCANNING...</span> (Active Status).</li>
+                    <li>Middle Left: <span class="readout">TOTAL: X</span> (Total Lifetime Hits).</li>
+                    <li>Middle Right: <span class="readout">SESS: X</span> (Current Session Hits).</li>
+                    <li>Bottom Center: <span class="readout">LAST: X</span> (Distance of the last recorded anomaly).</li>
                 </ul>
                 
                 <h4>Detection Trigger:</h4>
