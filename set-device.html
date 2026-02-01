@@ -19,6 +19,7 @@
             --dark-bg: #0d0d0d;
             --panel-bg: #1a1a1a;
             --text-color: #e0e0e0;
+            --paypal-gold: #ffc439;
         }
         html { scroll-behavior: smooth; }
         body {
@@ -81,31 +82,53 @@
         .container { max-width: 1100px; margin: 0 auto; padding: 40px 20px; }
         .description-section { border-bottom: 1px solid #333; padding-bottom: 40px; margin-bottom: 40px; }
         
-        /* GALLERY STYLES - NEW CLASSIFIED LOOK */
+        /* GALLERY STYLES */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             margin-bottom: 40px;
         }
-        .gallery-card {
-            text-align: center;
-        }
+        .gallery-card { text-align: center; }
         .product-photo {
-            width: 100%;
-            height: auto;
-            border: 1px solid #333;
-            /* This gives it the gritty, black & white classified look */
+            width: 100%; height: auto; border: 1px solid #333;
             filter: grayscale(100%) contrast(120%) brightness(90%); 
-            transition: all 0.5s ease;
+            transition: all 0.5s ease; cursor: crosshair;
         }
-        /* When you hover, it snaps to full color */
         .product-photo:hover {
             filter: grayscale(0%) contrast(100%) brightness(100%);
             border-color: var(--primary-green);
             box-shadow: 0 0 15px rgba(0, 255, 65, 0.2);
         }
 
+        /* STORE SECTION STYLES */
+        .purchase-panel {
+            background-color: var(--panel-bg);
+            padding: 30px;
+            border: 1px solid #333;
+            max-width: 600px;
+            margin: 0 auto 50px auto;
+            text-align: center;
+        }
+        .price-tag {
+            font-size: 2.5rem; color: #fff; font-weight: bold; margin-bottom: 10px;
+        }
+        .stock-status {
+            color: var(--paypal-gold); font-size: 0.9rem; margin-bottom: 20px; letter-spacing: 2px; font-weight: bold;
+        }
+        .buy-buttons {
+            display: flex; flex-direction: column; gap: 10px;
+        }
+        .cart-btn {
+            background-color: var(--primary-green); color: #000;
+            border: none; padding: 15px; font-weight: bold; font-size: 1.1rem;
+            cursor: pointer; transition: opacity 0.3s;
+        }
+        .cart-btn:disabled {
+            background-color: #333; color: #888; cursor: not-allowed;
+        }
+
+        /* FEATURES & CONTACT */
         .features {
             display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px; margin-top: 40px;
@@ -118,34 +141,19 @@
             background-color: var(--panel-bg); text-align: center; padding: 60px 20px;
             margin-top: 50px; border-top: 1px solid #333;
         }
-        
-        /* FORM CONTAINER */
         .form-container iframe {
-            width: 100%;
-            max-width: 640px;
-            height: 800px;
-            border: none;
-            margin-top: 20px;
+            width: 100%; max-width: 640px; height: 800px; border: none; margin-top: 20px;
         }
 
-        /* FAQ STYLES */
+        /* FAQ & SOCIALS */
         details summary {
-            list-style: none;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            list-style: none; display: flex; justify-content: space-between; align-items: center;
         }
         details summary::after {
-            content: '+'; 
-            color: var(--primary-green);
-            font-weight: bold;
-            font-size: 1.2rem;
+            content: '+'; color: var(--primary-green); font-weight: bold; font-size: 1.2rem;
         }
-        details[open] summary::after {
-            content: '-';
-        }
-
-        /* SOCIALS */
+        details[open] summary::after { content: '-'; }
+        
         .social-links { margin-bottom: 20px; }
         .social-icon { display: inline-block; margin: 0 15px; color: #666; transition: all 0.3s ease; }
         .social-icon svg { width: 24px; height: 24px; fill: currentColor; }
@@ -158,7 +166,6 @@
             font-size: 0.9rem; color: #666;
         }
 
-        /* MOBILE */
         @media screen and (max-width: 600px) {
             body { padding-top: 180px; }
             .hero h2 { font-size: 1.8rem; }
@@ -184,7 +191,7 @@
                     </div>
                 </div>
                 <a href="manual.html">Manuals</a>
-                <a href="#contact">Waitlist</a>
+                <a href="#store">Waitlist</a>
             </nav>
         </div>
     </header>
@@ -192,7 +199,7 @@
     <section class="hero">
         <h2 style="font-size: 3rem;">The S.E.T. Device</h2>
         <p>Spectral Environment Tracker. Precision engineered for the dark.</p>
-        <a href="#contact" class="btn">Join Waitlist</a>
+        <a href="#store" class="btn">View Status</a>
     </section>
 
     <div class="container">
@@ -201,29 +208,40 @@
             <p>
                 The <strong>Spectral Environment Tracker (S.E.T.)</strong> is designed for investigators who require actionable data over random noise. Unlike standard motion sensors that can be triggered by thermal drafts or insects, the S.E.T. utilizes a precision <strong>Ultrasonic Sensor</strong> to create a physical "tripwire."
             </p>
-            <br>
-            <p>
-                By constantly measuring the distance to the nearest object (such as a hallway wall or door), the device establishes a baseline. If that distance changes—indicating an unseen mass has entered the space—the S.E.T. alerts you instantly via the OLED display.
-            </p>
         </div>
 
-        <h3 style="color: var(--primary-green); margin-bottom: 20px;">Prototype Gallery</h3>
-        
         <div class="gallery-grid">
             <div class="gallery-card">
                 <img src="device-front.jpg" alt="S.E.T. Front View" class="product-photo">
                 <p style="color: #666; font-size: 0.8rem; margin-top: 5px;">FIG 1.0: FRONT PROFILE</p>
             </div>
-
             <div class="gallery-card">
                 <img src="device-side.jpg" alt="S.E.T. Side Profile" class="product-photo">
                 <p style="color: #666; font-size: 0.8rem; margin-top: 5px;">FIG 1.1: SENSOR HOUSING</p>
             </div>
-
             <div class="gallery-card">
                 <img src="device-screen.jpg" alt="S.E.T. OLED Display" class="product-photo">
                 <p style="color: #666; font-size: 0.8rem; margin-top: 5px;">FIG 1.2: ACTIVE SCANNING</p>
             </div>
+        </div>
+
+        <div id="store" class="purchase-panel">
+            <h3 style="margin-top: 0; color: #fff;">S.E.T. Unit (Model v1.0)</h3>
+            
+            <div class="stock-status">⚠ MANUFACTURING BATCH #1</div>
+            
+            <div class="price-tag">$149.00</div>
+            
+            <div class="buy-buttons">
+                <button class="cart-btn" disabled>
+                    DROPPING SOON
+                </button>
+            </div>
+            
+            <p style="font-size: 0.8rem; color: #888; margin-top: 20px;">
+                First batch is currently on the print bed.<br>
+                <a href="#contact" style="color: var(--primary-green);">Join the Waitlist</a> to get the drop notification.
+            </p>
         </div>
         </div>
 
@@ -234,32 +252,24 @@
                 <h4>Ultrasonic Sensor</h4>
                 <p>Advanced distance measuring technology that detects physical movement and unseen anomalies in total darkness.</p>
             </div>
-            
             <div class="feature-card">
                 <h4>OLED Display</h4>
                 <p>High-contrast organic LED screen provides real-time distance readouts and system status, visible in pitch-black environments.</p>
             </div>
-
             <div class="feature-card">
                 <h4>Custom Firmware</h4>
                 <p>Proprietary code written by Spectral Labs to eliminate false positives and ensure data integrity.</p>
             </div>
-
             <div class="feature-card">
                 <h4>8-Hour Battery Life</h4>
                 <p>Equipped with a high-capacity power source designed for long-duration investigations without interruption.</p>
-            </div>
-
-            <div class="feature-card">
-                <h4>Custom 3D Printed Housing</h4>
-                <p>Lightweight, rugged enclosure engineered specifically for field use, protecting sensitive components from drops and debris.</p>
             </div>
         </div>
     </div>
 
     <div id="contact" class="contact-section">
         <h3>Join the Waitlist</h3>
-        <p>Sign up below to be notified when new units are available.</p>
+        <p>Sign up below to be notified when the first batch drops.</p>
         
         <div class="form-container">
             <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeaZO5vzTbE1vm1tEkH5019224ycG3UCK9iqgN5X7ZjOapFYg/viewform?embedded=true" width="640" height="721" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
@@ -270,12 +280,7 @@
             
             <details style="margin-bottom: 15px; border-bottom: 1px solid #222; padding-bottom: 10px; cursor: pointer;">
                 <summary style="font-weight: bold; color: #fff;">When will the S.E.T. be available?</summary>
-                <p style="margin-top: 10px; color: #aaa; font-size: 0.9rem;">We are currently in the final prototyping and field-testing phase. We expect a limited batch release in quarter 2 of 2026. Join the waitlist to get notified when we have production models made.</p>
-            </details>
-
-            <details style="margin-bottom: 15px; border-bottom: 1px solid #222; padding-bottom: 10px; cursor: pointer;">
-                <summary style="font-weight: bold; color: #fff;">What is the estimated price?</summary>
-                <p style="margin-top: 10px; color: #aaa; font-size: 0.9rem;">Pricing is being finalized based on component costs. Our goal is to keep it affordable for independent investigators while maintaining commercial durability.</p>
+                <p style="margin-top: 10px; color: #aaa; font-size: 0.9rem;">We are currently manufacturing Batch #1. We expect a limited drop this month. Join the waitlist to get notified immediately.</p>
             </details>
 
             <details style="margin-bottom: 15px; border-bottom: 1px solid #222; padding-bottom: 10px; cursor: pointer;">
