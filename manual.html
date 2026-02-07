@@ -131,97 +131,91 @@
             <p>Select your device below to view the user manual and safety info.</p>
         </div>
 
-        <details>
-            <summary>S.E.T. Device (Model v1.0)</summary>
+        <details open>
+            <summary>S.E.T. Device (Firmware v63.0)</summary>
             <div class="manual-content">
                 
                 <h3>1. Device Overview</h3>
-                <p>The S.E.T. is a dedicated ultrasonic anomaly detector designed for paranormal investigation. Unlike standard EMF meters, this device uses active echolocation (sonar) to map the physical distance to a target wall or object. It monitors this baseline for deviations, alerting the operator only when a physical mass manifests within the calibrated zone.</p>
+                <p>The S.E.T. is a dedicated ultrasonic anomaly detector designed for paranormal investigation. It utilizes active echolocation (sonar) to detect physical mass in real-time. Firmware v63.0 introduces a Dual-Mode Operation system, allowing for both stationary trap deployment and handheld sweeping.</p>
                 <h4>Key Features:</h4>
                 <ul>
                     <li><strong>Active Echolocation:</strong> Continuous ultrasonic pinging to detect physical anomalies.</li>
-                    <li><strong>Smart Calibration (v32):</strong> 3-Stage stability audit with Infinity Rejection to prevent false positives.</li>
-                    <li><strong>Anomaly Freeze:</strong> Instant "Snapshot" of distance with a 2-second visual hold for evidence review.</li>
-                    <li><strong>Session Logging:</strong> Internal memory stores the last 20 events of the current session.</li>
+                    <li><strong>Dual-Mode Boot:</strong> Switch between Stationary Trap and Handheld Sweep on startup.</li>
+                    <li><strong>Dynamic Scaling:</strong> Visual tracking bars adapt automatically to the environment.</li>
+                    <li><strong>Odometer:</strong> Tracks total device runtime (Lifetime Hours) in internal memory.</li>
                 </ul>
 
-                <h3>2. Startup & Calibration</h3>
+                <h3>2. Smart Boot System (Mode Selection)</h3>
+                <p>The device uses a single-button "Elevator" system to select your operating mode during power-on.</p>
+                
+                <h4>A. Stationary Mode (Default)</h4>
+                <ul>
+                    <li><strong>Action:</strong> Flip the power switch ON. Do not touch any buttons.</li>
+                    <li><strong>Function:</strong> The device performs a 3-stage wall calibration and enters "Trap Mode." Ideally used for monitoring doorways or hallways.</li>
+                </ul>
+
+                <h4>B. Handheld Mode (Sweep)</h4>
+                <ul>
+                    <li><strong>Action:</strong> Hold the <strong>RCL Button</strong> while powering on.</li>
+                    <li><strong>Release:</strong> Let go when the screen says <span class="readout">RELEASE FOR HANDHELD</span> (approx. 1 second).</li>
+                    <li><strong>Function:</strong> Skips calibration and enters "Active Sweep." The sensor becomes highly sensitive to any object within 6 feet.</li>
+                </ul>
+
+                <h4>C. Diagnostics Mode</h4>
+                <ul>
+                    <li><strong>Action:</strong> Keep holding the <strong>RCL Button</strong> past the handheld prompt.</li>
+                    <li><strong>Release:</strong> Let go when the screen says <span class="readout">HOLD FOR DIAGNOSTICS</span> (approx. 4 seconds).</li>
+                    <li><strong>Function:</strong> Enters the system maintenance menu.</li>
+                </ul>
+
+                <h3>3. Scanning Operations</h3>
+                
+                <h4>Mode A: Stationary Trap</h4>
                 <div class="warning-box">
-                    <strong>CRITICAL:</strong> The device must be calibrated against a solid, stationary surface (wall, door, etc.) OR pointed at open space before scanning can begin.
+                    <strong>CRITICAL:</strong> In Stationary Mode, the device creates a "Safety Buffer" of 6 inches from the calibrated wall. Any object entering the space between the device and the buffer will trigger the alarm.
                 </div>
-                <ol>
-                    <li><strong>Power On:</strong> Flip the main power switch.</li>
-                    <li><strong>The "Smart Calibration" Sequence:</strong> The device will begin active scanning immediately. It performs a 3-Strike Stability Check. It must receive consistent readings for 3 consecutive cycles to lock.</li>
-                </ol>
-                <p><strong>Status Indicators:</strong> <span class="readout">CALIBRATING...</span> &rarr; <span class="readout">VERIFYING...</span> &rarr; <span class="readout">CONFIRMING...</span></p>
-                
-                <h4>Calibration Notes:</h4>
                 <ul>
-                    <li><strong>Open Space Mode:</strong> If no wall is detected during startup, the device defaults to a maximum range of <strong>120 Inches</strong>.</li>
-                    <li><strong>ERROR: <span class="readout">UNSTABLE AREA / RE-AIM DEVICE</span></strong><br>
-                    <em>Cause:</em> The sensor is detecting "jumping" numbers (e.g., the beam is hitting the edge of a chair or railing).<br>
-                    <em>Solution:</em> Move the device 1–2 inches left or right to find a solid surface.</li>
+                    <li><strong>Visuals:</strong> Displays a Dashboard with Battery, Session Hits, and Lifetime Hits.</li>
+                    <li><strong>Alert:</strong> When an anomaly is detected, the screen flashes <span class="readout">ANOMALY DETECTED</span> and freezes for 2 seconds for evidence review.</li>
+                    <li><strong>Tracking:</strong> After the freeze, it enters "Tracking Mode" with a dynamic bar graph.</li>
                 </ul>
 
-                <h3>3. Scanning Operation</h3>
-                <p>Once <span class="readout">RANGE CALIBRATED</span> appears, the device enters Active Scan Mode.</p>
-                <h4>The Scanning Screen Layout:</h4>
+                <h4>Mode B: Handheld Sweep</h4>
                 <ul>
-                    <li>Top Row: <span class="readout">SCANNING...</span> (Active Status).</li>
-                    <li>Middle Left: <span class="readout">TOTAL: X</span> (Total Lifetime Hits).</li>
-                    <li>Middle Right: <span class="readout">SESS: X</span> (Current Session Hits).</li>
-                    <li>Bottom Center: <span class="readout">LAST: X</span> (Distance of the last recorded anomaly).</li>
+                    <li><strong>Visuals:</strong> Displays a large "Live Gauge" and distance readout. There is no dashboard or waiting period.</li>
+                    <li><strong>Audio (Geiger Style):</strong> The device emits clicking sounds that increase in speed as you get closer to an object or anomaly.</li>
+                    <li><strong>Range:</strong> Fixed to 72 inches (6 feet). The bar graph fills up as you approach a target.</li>
                 </ul>
-                
-                <h4>Detection Trigger:</h4>
-                <p>If an object (or anomaly) is detected closer than the calibrated wall distance (minus 5 inches), the alarm triggers.</p>
-                
-                <p><strong>Phase 1: The Alert (0 to 2 Seconds)</strong><br>
-                Audio: Sharp Double-Beep.<br>
-                Visual: Screen displays <span class="readout">ANOMALY DETECTED</span> and distance.<br>
-                Behavior: The screen FREEZES for 2 seconds for evidence review.</p>
-
-                <p><strong>Phase 2: Live Tracking (> 2 Seconds)</strong><br>
-                If the anomaly remains, the screen switches to Tracking Mode.<br>
-                Visual: Spectral avatar (Ghost) appears with live distance readout.</p>
 
                 <h3>4. Data Logging & Recall</h3>
                 <p>The device stores distance and timestamp data for the last 20 anomalies detected in the current session.</p>
                 <ul>
-                    <li><strong>Enter Logs:</strong> Press the <strong>RCL (Recall)</strong> button once during scanning.</li>
+                    <li><strong>Enter Logs:</strong> Press the <strong>RCL Button</strong> once during scanning (Stationary Mode only).</li>
                     <li><strong>Navigation:</strong> Press <strong>RCL</strong> again to scroll to the next log entry.</li>
                     <li><strong>Exit to Scanning:</strong> HOLD the <strong>RCL Button</strong> for 1.5 seconds until the screen returns to scanning mode.</li>
                 </ul>
 
-                <h3>5. Diagnostics & Troubleshooting</h3>
-                <p>To access the hidden diagnostics menu:</p>
-                <ol>
-                    <li>Hold the <strong>RCL Button</strong> WHILE powering on the device.</li>
-                    <li>Release when <span class="readout">DIAGNOSTICS</span> appears.</li>
-                </ol>
+                <h3>5. Diagnostics & Maintenance</h3>
+                <p>Access this menu via the "Smart Boot" system (Hold button for 4s on startup).</p>
                 <ul>
-                    <li><strong>Wipe Data:</strong> Hold the <strong>RCL Button</strong> when prompted to reset "Lifetime Hits".</li>
-                    <li><strong>Hardware Test:</strong> Cycles LED, Buzzer, and Sensor.</li>
+                    <li><strong>Page 1 (Reset):</strong> Hold the button to wipe "Lifetime Hits" and "Runtime" from memory.</li>
+                    <li><strong>Page 2 (LED Test):</strong> Flashes the front notification LED.</li>
+                    <li><strong>Page 3 (Battery):</strong> Displays raw voltage input.</li>
+                    <li><strong>Page 4 (Odometer):</strong> Displays total device runtime in Hours/Minutes. <em>Note: Runtime saves to memory every 10 minutes to preserve chip life.</em></li>
                 </ul>
-                
-                <h4>System Freeze?</h4>
-                <p>If the device becomes unresponsive due to extreme interference, press the <strong>RST (Reset)</strong> button to force a hardware reboot. This will NOT erase your Lifetime Hits.</p>
 
                 <h3>6. Safety & Legal Disclaimers</h3>
                 <div class="warning-box">
                     <strong>A. LIMITATION OF LIABILITY</strong><br><br>
-                    <strong>For Entertainment Purposes Only:</strong> This device is sold and marketed as a novelty item for entertainment. The manufacturer makes no scientific claims regarding the existence of paranormal phenomena, ghosts, or spirits. Any evidence gathered by this device is subject to user interpretation.<br><br>
-                    <strong>No Warranty of Evidence:</strong> The manufacturer does not guarantee that this device will detect, record, or communicate with paranormal entities.<br><br>
-                    <strong>Assumption of Risk:</strong> The user assumes all responsibility for their safety while using this device. Paranormal investigation often occurs in low-light environments, abandoned structures, or hazardous areas. The manufacturer is NOT LIABLE for any personal injury, property damage, trespassing fines, or legal action resulting from the user's activities while operating this device.
+                    <strong>For Entertainment Purposes Only:</strong> This device is sold and marketed as a novelty item for entertainment. The manufacturer makes no scientific claims regarding the existence of paranormal phenomena. Any evidence gathered is subject to user interpretation.<br><br>
+                    <strong>Assumption of Risk:</strong> The user assumes all responsibility for their safety while using this device. The manufacturer is NOT LIABLE for any personal injury, property damage, trespassing fines, or legal action resulting from the user's activities.
                 </div>
 
                 <div class="warning-box">
                     <strong>B. SAFETY WARNINGS</strong><br><br>
-                    <strong>Environment:</strong> Do not operate this device in rain, extreme humidity, or conductive environments. This device is not waterproof.<br><br>
-                    <strong>Epilepsy Warning:</strong> This device utilizes flashing graphical elements on the OLED screen and high-contrast LEDs. Individuals with photosensitive epilepsy should consult a physician before use.<br><br>
-                    <strong>Ultrasonic Emissions:</strong> This device emits high-frequency sound waves (40kHz). Do not point the sensor directly at an animal's ears at close range.<br><br>
-                    <strong>Battery Safety:</strong> This device uses Lithium-Ion or Lithium-Polymer batteries. Do not puncture, crush, or expose the device to fire. If the device becomes hot to the touch, disconnect power immediately.<br><br>
-                    <strong>Not a Medical Device:</strong> This device is not intended to diagnose, treat, or prevent any disease or medical condition. Do not use this device for navigation or obstacle avoidance for the visually impaired.
+                    <strong>Environment:</strong> Do not operate in rain or high humidity. Not waterproof.<br><br>
+                    <strong>Epilepsy Warning:</strong> Flashing graphical elements may affect photosensitive individuals.<br><br>
+                    <strong>Ultrasonic Emissions:</strong> Emits 40kHz sound waves. Do not point directly at animals/pets at close range.
                 </div>
                 
                 <p style="text-align: center; font-weight: bold; margin-top: 30px; color: var(--primary-green);">
