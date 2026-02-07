@@ -132,11 +132,11 @@
         </div>
 
         <details open>
-            <summary>S.E.T. Device (Firmware v63.0)</summary>
+            <summary>S.E.T. Device (Firmware v65.0)</summary>
             <div class="manual-content">
                 
                 <h3>1. Device Overview</h3>
-                <p>The S.E.T. is a dedicated ultrasonic anomaly detector designed for paranormal investigation. It utilizes active echolocation (sonar) to detect physical mass in real-time. Firmware v63.0 introduces a Dual-Mode Operation system, allowing for both stationary trap deployment and handheld sweeping.</p>
+                <p>The S.E.T. is a dedicated ultrasonic anomaly detector designed for paranormal investigation. It utilizes active echolocation (sonar) to detect physical mass in real-time. Firmware v65.0 introduces a Dual-Mode Operation system, allowing for both stationary trap deployment and handheld sweeping.</p>
                 <h4>Key Features:</h4>
                 <ul>
                     <li><strong>Active Echolocation:</strong> Continuous ultrasonic pinging to detect physical anomalies.</li>
@@ -176,8 +176,8 @@
                 </div>
                 <ul>
                     <li><strong>Visuals:</strong> Displays a Dashboard with Battery, Session Hits, and Lifetime Hits.</li>
+                    <li><strong>Time Remaining:</strong> The Battery indicator toggles every 4 seconds to show Estimated Runtime (e.g., <span class="readout">REM: 3h 15m</span>).</li>
                     <li><strong>Alert:</strong> When an anomaly is detected, the screen flashes <span class="readout">ANOMALY DETECTED</span> and freezes for 2 seconds for evidence review.</li>
-                    <li><strong>Tracking:</strong> After the freeze, it enters "Tracking Mode" with a dynamic bar graph.</li>
                 </ul>
 
                 <h4>Mode B: Handheld Sweep</h4>
@@ -201,8 +201,17 @@
                     <li><strong>Page 1 (Reset):</strong> Hold the button to wipe "Lifetime Hits" and "Runtime" from memory.</li>
                     <li><strong>Page 2 (LED Test):</strong> Flashes the front notification LED.</li>
                     <li><strong>Page 3 (Battery):</strong> Displays raw voltage input.</li>
-                    <li><strong>Page 4 (Odometer):</strong> Displays total device runtime in Hours/Minutes. <em>Note: Runtime saves to memory every 10 minutes to preserve chip life.</em></li>
+                    <li><strong>Page 4 (Odometer):</strong> Displays total device runtime in Hours/Minutes.</li>
                 </ul>
+                
+                <h4>Charging Screensaver Mode</h4>
+                <p>To display charging status while the device is plugged in:</p>
+                <ol>
+                    <li>Enter Diagnostics Mode.</li>
+                    <li>Click through the test pages until you reach <strong>SELECT MODE</strong>.</li>
+                    <li><strong>HOLD</strong> the button to enter "Screensaver Mode."</li>
+                    <li>The screen will display a bouncing "CHARGING: XX%" indicator.</li>
+                </ol>
 
                 <h3>6. Safety & Legal Disclaimers</h3>
                 <div class="warning-box">
